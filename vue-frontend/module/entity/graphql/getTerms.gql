@@ -1,0 +1,71 @@
+#import "./fragments/Term/Term.gql"
+#import "./fragments/Connection/PageInfo.gql"
+
+query (
+  $filter: JSON,
+  $nav: QueryInputNav,
+  $view: String = "public",
+  $queryId: String,
+  $excluder: Boolean,
+  $await: String,
+  $field: Boolean = false,
+
+  $post: Boolean = false,
+  $posts: Boolean = false,
+
+  $postFilter: JSON = {},
+  $postNav: JSON = {},
+  $postImage: Boolean = true,
+  $postImageSize: String = "d2.4",
+  $cache: JSON
+) {
+  res: getTerms(
+    filter: $filter,
+    nav: $nav,
+    view: $view,
+    queryId: $queryId,
+    excluder: $excluder,
+    await: $await,
+    cache: $cache
+  ) {
+    nodes {
+      ...Term
+      field @include(if: $field)
+      post(filter: $postFilter) @include(if: $post) {
+        image @include(if: $postImage) {
+          thumbs(size: $postImageSize)
+        }
+        nid
+        slug
+        format
+        codePath
+        menuOrder
+        created
+        title
+        excerpt
+        content
+        contentFormatted
+        type
+        meta
+        taxonomy
+        terms {
+          ...Term
+        }
+        url
+      }
+      posts(filter: $postFilter, nav: $postNav) @include(if: $posts) {
+        nodes {
+          title
+          url
+          created
+        }
+        pageInfo {
+           ...PageInfo
+        }
+      }
+    }
+    pageInfo {
+      ...PageInfo
+    }
+  }
+}

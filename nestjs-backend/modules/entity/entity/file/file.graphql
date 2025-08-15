@@ -1,0 +1,36 @@
+
+input FileQueryInputFilter {
+  id: Int
+  ids: [Int]
+
+  slug: String
+  slugs: [String]
+
+  name: String
+  name_: FilterConditionString
+
+  taxonomy: String
+  taxonomies: [String]
+}
+
+type FilesConnection {
+  edges: [FileEdge]
+  pageInfo: PageInfo
+  totalCount: Int
+}
+
+type FileEdge {
+  node: File!
+  cursor: String
+}
+
+type File {
+  _id: String
+  nid: Int
+  name: String
+  slug: String
+  taxonomy: String
+  weight: Int
+  downloadUrl: String
+}
+

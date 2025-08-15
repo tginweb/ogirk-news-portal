@@ -1,0 +1,33 @@
+.elementor-widget-sm-divider
+{
+  .elementor-divider-splitted
+  {
+    line-height: 0;
+    font-size: 0;
+    text-align: center;
+
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+
+    -webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+  }
+
+  .elementor-divider-splitted-side
+  {
+    align-self: center!important;
+  }
+
+  .elementor-divider-splitted-split
+  {
+    align-self: center!important;
+  }
+
+  .elementor-heading-wrapper
+  {
+    font-size: 1rem;
+    line-height: normal;
+  }
+}

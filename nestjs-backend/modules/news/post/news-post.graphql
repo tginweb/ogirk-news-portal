@@ -1,0 +1,11 @@
+
+type Post {
+  metaQuote: PostMetaQuote
+}
+
+type PostMetaQuote {
+  text: String
+  speaker_name: String
+  speaker_job: String
+  image: Image
+}

@@ -1,0 +1,83 @@
+.sm-widget-footer.footer-1
+{
+  position: relative;
+  margin: 20px 0 0 0;
+  display: flex;
+  overflow: hidden;
+
+  .w-caption,
+  .w-filters,
+  .w-more {
+
+  }
+
+  .w-caption
+  {
+    display: inline-block;
+    font-size: 27px;
+    line-height: 1em;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    margin-right: auto;
+    padding-right: 20px;
+  }
+
+  .w-pagination
+  {
+    margin-right: auto;
+    padding-right: 20px;
+
+    .q-pagination
+    {
+       margin-top: 0;
+    }
+  }
+
+  .w-filters
+  {
+    margin: 5px 10px 0 0;
+    overflow: hidden;
+    overflow-x: auto;
+    margin-bottom: -50px;
+    white-space: nowrap;
+
+    .q-filters
+    {
+      padding-bottom: 20px;
+    }
+  }
+
+  .w-more
+  {
+    display: inline-block;
+    line-height: 1em;
+    font-weight: bold;
+    text-transform: none;
+    margin: 0 0 0 0;
+    white-space: nowrap;
+  }
+
+  .w-caption,
+  .w-caption a,
+  .w-more,
+  .w-more a
+  {
+    color: #818a93;
+    text-decoration: none;
+  }
+
+  .w-more-icon,
+  .w-more-text
+  {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .w-more-icon
+  {
+    margin: 2px 0 0 10px;
+  }
+
+}

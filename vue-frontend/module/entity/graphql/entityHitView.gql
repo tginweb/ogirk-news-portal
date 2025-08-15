@@ -1,0 +1,7 @@
+mutation (
+    $entityType: String,
+    $entityNid: Int
+)
+{
+  res: entityHitView(entityType: $entityType, entityNid: $entityNid)
+}

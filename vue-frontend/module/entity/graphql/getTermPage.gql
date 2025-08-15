@@ -1,0 +1,8 @@
+#import "./fragments/Term/Term.gql"
+
+query ($filter: JSON) {
+  res: getTerm(filter: $filter) {
+     ...Term
+  }
+}
+

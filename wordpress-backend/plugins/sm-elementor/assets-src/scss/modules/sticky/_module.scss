@@ -1,0 +1,14 @@
+.sm-elementor-sticky-show-on-stick:not(.sticky)
+{
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility 0s linear 300ms, opacity 1000ms;
+}
+
+.sm-elementor-sticky-show-on-stick.sticky
+{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 1000ms;
+}

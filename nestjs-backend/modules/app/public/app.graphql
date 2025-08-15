@@ -1,0 +1,15 @@
+type Query {
+  app_public_GetMenuItems: [MenuItem]
+}
+
+type Subscription {
+  noteAdded(parentNid: Int): Post
+}
+
+type Mutation {
+  noteAdd(data: JSON): Post
+  questionSend(data: JSON): OperationResult
+
+  anticorruptionFeedbackSend(data: JSON): OperationResult
+}
+

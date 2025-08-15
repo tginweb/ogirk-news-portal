@@ -1,0 +1,4 @@
+type Query {
+  templaterAdmin_LoadRows(filter: JSON, nav: QueryInputNav): TemplaterTemplateConnection
+  templaterAdmin_LoadRow(id: String): TemplaterTemplate
+}

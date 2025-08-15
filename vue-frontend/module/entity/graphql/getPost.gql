@@ -1,0 +1,42 @@
+#import "./fragments/Term/Term.gql"
+#import "./fragments/Post/Post.gql"
+
+query (
+  $filter: JSON,
+  $nav: QueryInputNav,
+
+  $image: Boolean = true,
+  $imageSize: String = "d1.6",
+  $imageSizes: [String] = [],
+  $imageHook: Boolean = true,
+
+  $terms: Boolean = true,
+  $termsTaxonomy: [String] = ["category"],
+
+  $hub: Boolean = false,
+
+  $authors: Boolean = false,
+  $gallery: Boolean = false,
+  $galleryImageSize: String = "",
+  $galleryImageSizes: [String] = ["m1.9", "d1.9", "d1.6"],
+
+  $content: Boolean = false,
+
+  $view: String = "public",
+  $queryId: String,
+  $excluder: Boolean,
+  $await: String
+
+
+) {
+  res: getPost(
+      filter: $filter,
+      nav: $nav,
+      view: $view,
+      queryId: $queryId,
+      excluder: $excluder,
+      await: $await
+  ) {
+      ...Post
+  }
+}

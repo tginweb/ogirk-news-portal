@@ -1,0 +1,114 @@
+
+type Query {
+  indexPosts: Int
+
+  getPostsElastic(
+    filter: JSON,
+    nav: QueryInputNav,
+    view: String,
+    queryId: String
+  ): PostsConnection
+
+  getPostsCalendar(
+    filter: JSON
+  ): [PostsGroup]
+
+  getPosts(
+    filter: JSON,
+    nav: QueryInputNav,
+    view: String,
+    queryId: String,
+    alterable: Boolean,
+    await: String,
+    excluder: Boolean,
+    cache: JSON
+  ): PostsConnection
+
+  getPost(
+    filter: JSON,
+    nav: QueryInputNav,
+    view: String,
+    queryId: String,
+    await: String,
+    excluder: Boolean
+  ): Post
+
+  getPostFull(filter: JSON): Post
+}
+
+type Mutation {
+  updateSchema(data: JSON): updateSchemaResult
+}
+
+
+type updateSchemaResult {
+  msg: String
+}
+
+input FilterConditionTaxonomy {
+  op: String
+  id: Int
+  ids: [Int]
+  slug: String,
+  slugs: [String]
+  taxonomy: String
+}
+
+type PostsGroup {
+  _id: JSON
+  info: JSON
+  count: Int
+}
+
+type PostsConnection {
+  nodes: [Post]
+  pageInfo: PageInfo
+}
+
+type PostStat {
+  views: Int
+}
+
+type ContentWord {
+  word: String
+  lemma: String
+}
+
+type Post {
+  _id: String
+  nid: Int
+  slug: String
+  format: String
+  codePath: String
+  menuOrder: Int
+  created: String
+  title: String
+  excerpt: String
+  content: String
+  contentFormatted: String
+  builder: JSON
+  builderType: String
+  type: String
+  taxonomy: JSON
+  terms(tax: [String]): [Term]
+  termsByTax(tax: [String]): JSON
+  image(hook: Boolean): Image
+  gallery: [Image]
+  url: String
+  meta: JSON
+  share: JSON
+  hub: Post
+  highlight: JSON
+  stat: PostStat
+  editUrl: String
+  template: String
+
+  textAuthor: [Term]
+  fotoAuthor: [Term]
+  queryId: String
+
+  contentWordsProxy: [ContentWord]
+}
+
+
+

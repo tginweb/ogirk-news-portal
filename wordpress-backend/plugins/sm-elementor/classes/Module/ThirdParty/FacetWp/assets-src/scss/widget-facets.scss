@@ -1,0 +1,94 @@
+
+
+.elementor-widget-sm-fwp-facets
+{
+  .facetwp-facet
+  {
+    margin-bottom: 0;
+  }
+
+  .el-facet-wrapper
+  {
+    margin-bottom: 0;
+
+    &.hidden
+    {
+      display: none;
+    }
+  }
+
+  .el-facet-title
+  {
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .el-facet-content
+  {
+    margin-top: 0.5rem;
+  }
+
+
+  .facetwp-checkbox {
+    background-position: 0 0.3em;
+  }
+
+
+  .el-toggle
+  {
+    &.collapsed
+    {
+      .on-opened
+      {
+        display: none;
+      }
+    }
+
+    &:not(.collapsed)
+    {
+      .on-collapsed
+      {
+        display: none;
+      }
+    }
+  }
+
+
+  &.el-dropdown-mobile
+  {
+    @media (min-width: 768px) {
+      .el-toggle { display: none; }
+      .el-facets {
+        display: block;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .el-facets {
+        border: 1px solid rgb(238, 238, 238);
+        padding: 1rem 1rem 0 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &.el-dropdown-tablet
+  {
+    @media (min-width: 1023px) {
+      .el-toggle { display: none; }
+      .el-facets {
+        display: block;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .el-facets {
+        border: 1px solid rgb(238, 238, 238);
+        padding: 1rem 1rem 0 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+

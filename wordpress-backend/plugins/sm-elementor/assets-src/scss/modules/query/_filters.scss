@@ -1,0 +1,32 @@
+.q-container
+{
+  .q-filters
+  {
+     margin-bottom: 1rem;
+  }
+}
+
+
+select.q-filter-control,
+input.q-filter-control
+{
+   width: 100%;
+}
+
+.filter-control-links
+{
+
+  .control-item
+  {
+    margin-right: 15px;
+  }
+}
+
+
+.filter-control-links
+{
+    .control-item[data-selected]
+    {
+        color: #620001 !important;
+    }
+}

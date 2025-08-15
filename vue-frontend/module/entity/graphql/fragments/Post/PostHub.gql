@@ -1,0 +1,22 @@
+#import "../Term/Term.gql"
+#import "./Post.gql"
+
+fragment PostHub on Post {
+
+  ...Post
+
+   metaHub {
+      banner_title
+      banner_subtitle
+
+      banner_image {
+        nid
+        src
+      }
+      banner_bg_size
+      banner_bg_position
+      banner_bg_color
+   }
+
+}
+

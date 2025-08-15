@@ -1,0 +1,9 @@
+
+fragment PageInfo on PageInfo {
+  hasPrevious
+  hasNext
+  next
+  previous
+  ids
+  highlights
+}

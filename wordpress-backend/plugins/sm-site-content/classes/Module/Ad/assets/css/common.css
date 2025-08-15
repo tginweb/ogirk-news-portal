@@ -1,0 +1,9 @@
+.ad-block-wrapper.ad-block-center {
+  text-align: center;
+}
+.ad-block-wrapper.ad-block-border {
+  border: 1px solid #DDD;
+}
+.ad-block-wrapper.ad-block-padding .ad-block-inner {
+  padding: 6px;
+}

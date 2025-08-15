@@ -1,0 +1,114 @@
+
+
+
+.elementor-column-gap-h-default>.elementor-row>.elementor-column>.elementor-element-populated
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.elementor-column-gap-v-default>.elementor-row>.elementor-column>.elementor-element-populated
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.elementor-column-gap-hv-40 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 40px; }
+.elementor-column-gap-hv-50 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 50px; }
+.elementor-column-gap-hv-60 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 60px; }
+.elementor-column-gap-hv-80 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 80px; }
+
+
+
+.elementor-section.elementor-section-boxed >.elementor-container.elementor-column-gap-lt-default
+{
+  max-width: 800px;
+}
+
+.elementor-column-gap-lt-default > .elementor-row > .elementor-column > .elementor-element-populated { padding: 60px 0px; }
+.elementor-column-gap-lt-wide > .elementor-row > .elementor-column > .elementor-element-populated { padding: 40px 20px; }
+.elementor-column-gap-lt-narrow > .elementor-row > .elementor-column > .elementor-element-populated { padding: 50px 20px; }
+
+
+.elementor-column-gap-v-narrow > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 5px; padding-bottom: 5px; }
+.elementor-column-gap-v-default > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 10px; padding-bottom: 10px; }
+.elementor-column-gap-v-extended > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 15px; padding-bottom: 15px; }
+.elementor-column-gap-v-wide > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 20px; padding-bottom: 20px; }
+.elementor-column-gap-v-wider > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 30px; padding-bottom: 30px; }
+.elementor-column-gap-v-40 > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 40px; padding-bottom: 30px; }
+.elementor-column-gap-v-50 > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 50px; padding-bottom: 50px; }
+.elementor-column-gap-v-60 > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 60px; padding-bottom: 60px; }
+.elementor-column-gap-v-80 > .elementor-row > .elementor-column > .elementor-element-populated { padding-top: 80px; padding-bottom: 80px; }
+
+
+.elementor-column-gap-i-narrow > .elementor-row > .elementor-column > .elementor-element-populated { padding: 5px; }
+.elementor-column-gap-i-default > .elementor-row > .elementor-column > .elementor-element-populated { padding: 10px; }
+.elementor-column-gap-i-extended > .elementor-row > .elementor-column > .elementor-element-populated { padding: 15px; }
+.elementor-column-gap-i-wide > .elementor-row > .elementor-column > .elementor-element-populated { padding: 20px; }
+.elementor-column-gap-i-25 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 25px; }
+.elementor-column-gap-i-wider > .elementor-row > .elementor-column > .elementor-element-populated { padding: 30px; }
+.elementor-column-gap-i-40 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 40px; }
+.elementor-column-gap-i-50 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 50px; }
+.elementor-column-gap-i-60 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 60px; }
+.elementor-column-gap-i-80 > .elementor-row > .elementor-column > .elementor-element-populated { padding: 80px; }
+
+
+.elementor-column-gap-i-narrow,
+.elementor-column-gap-i-default,
+.elementor-column-gap-i-extended,
+.elementor-column-gap-i-wide,
+.elementor-column-gap-i-25,
+.elementor-column-gap-i-wider,
+.elementor-column-gap-i-40,
+.elementor-column-gap-i-50,
+.elementor-column-gap-i-60,
+.elementor-column-gap-i-80
+{
+
+  > .elementor-row  > .elementor-column:first-child > .elementor-element-populated
+  {
+    padding-left:0;
+  }
+
+  > .elementor-row  > .elementor-column:last-child > .elementor-element-populated
+  {
+    padding-right:0;
+  }
+
+  > .elementor-row > .elementor-column > .elementor-element-populated
+  {
+    @media (max-width: 767px)
+    {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+}
+
+.elementor-column-gap-layout {
+
+  > .elementor-row > .elementor-column > .elementor-element-populated
+  {
+     padding:15px 30px;
+
+     @media (max-width: 1024px)
+     {
+       padding-left: 15px;
+       padding-right: 15px;
+     }
+  }
+
+  > .elementor-row  > .elementor-column:first-child > .elementor-element-populated
+  {
+     padding-left:15px;
+  }
+
+  > .elementor-row  > .elementor-column:last-child > .elementor-element-populated
+  {
+     padding-right:15px;
+  }
+
+
+}

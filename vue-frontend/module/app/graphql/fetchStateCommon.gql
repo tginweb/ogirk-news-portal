@@ -1,0 +1,50 @@
+#import "~module/entity/graphql/fragments/Term/Term.gql"
+
+query {
+
+  commit__app__setMenuItems: app_public_GetMenuItems {
+      menu
+      title
+      url
+      native
+      entityNid
+      iconImage
+      dropdown
+
+      children {
+        menu
+        title
+    	  url
+    	  native
+        entityNid
+        iconImage
+
+        children {
+          menu
+          title
+          url
+          native
+          entityNid
+          iconImage
+        }
+      }
+  }
+
+  commit__ad__setAdZones: getTermsList(
+       filter: {taxonomies: ["sm-ad-zone"]},
+       nav: {limit: 100},
+       cache: "TEMP_MD"
+  )
+  {
+      ...Term
+  }
+
+  commit__ad__setAdTeaserZones: getTermsList(
+       filter: {taxonomies: ["sm-ad-teaser-zone"]},
+       nav: {limit: 100},
+       cache: "TEMP_MD"
+  )
+  {
+      ...Term
+  }
+}

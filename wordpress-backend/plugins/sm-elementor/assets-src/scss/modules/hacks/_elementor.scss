@@ -1,0 +1,73 @@
+
+
+.elementor-nav-menu
+{
+  width: 100%;
+}
+
+
+[class*="on-module-hover-"]
+{
+  -webkit-animation-duration: 1.25s;
+  animation-duration: 1.25s;
+}
+
+.on-module-hover-showSlideInUp
+{
+  max-height: 0;
+  overflow: hidden;
+}
+
+.sm-module:hover
+{
+  .on-module-hover-showSlideInUp
+  {
+    animation-name: showSlideInUp;
+  }
+}
+
+@keyframes showSlideInUp {
+  from {
+    visibility: visible;
+    max-height: 0;
+  }
+
+  to {
+    max-height: 200px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .elementor .elementor-hidden-phone {
+    display: none; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor .elementor-hidden-tablet {
+    display: none; } }
+
+@media (min-width: 1025px) {
+  .elementor .elementor-hidden-desktop {
+    display: none; } }
+
+
+
+
+.elementor-nav-menu__align-center .elementor-nav-menu--layout-horizontal .elementor-nav-menu {
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+
+.elementor-edit-area-active .elementor-sm-display-none
+{
+  display: block !important;
+}
+
+.elementor-sm-link-fromchild
+{
+  cursor: pointer;
+}
+

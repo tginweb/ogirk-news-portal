@@ -1,0 +1,29 @@
+.m-media
+{
+    position: relative;
+}
+
+
+.sm-query-module
+{
+    ul
+    {
+        margin: 0;
+        padding: 0;
+
+        li
+        {
+            list-style-type: none;
+        }
+    }
+
+    .m-overlay
+    {
+        pointer-events: none;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

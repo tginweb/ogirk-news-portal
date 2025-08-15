@@ -1,0 +1,13 @@
+fragment Term on Term {
+  _id
+  nid
+  name
+  taxonomy
+  slug
+  url
+  parent
+  lastActivity
+  postCount
+  meta
+  editUrl
+}

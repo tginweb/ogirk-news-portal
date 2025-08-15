@@ -1,0 +1,14 @@
+
+type Post {
+  metaHub: PostMetaHub
+}
+
+type PostMetaHub {
+  banner_bg_size: String
+  banner_bg_position: String
+  banner_bg_color: String
+  banner_image: File
+
+  banner_title: String
+  banner_subtitle: String
+}

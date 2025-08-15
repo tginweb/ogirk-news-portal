@@ -1,0 +1,16 @@
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@keyframes fadeOut_to_1 {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0.1; } }
+.fadeOut_to_1 {
+  -webkit-animation-name: fadeOut_to_1;
+  animation-name: fadeOut_to_1; }
+
+/*# sourceMappingURL=animation.css.map */

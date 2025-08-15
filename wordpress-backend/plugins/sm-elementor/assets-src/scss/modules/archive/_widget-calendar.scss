@@ -1,0 +1,69 @@
+.sm-elementor-calendar-view
+{
+    .el-calendar-filters
+    {
+       padding: 0.2em;
+
+       .el-calendar-filter
+       {
+          display: flex;
+          margin-bottom: 10px;
+
+          select
+          {
+             margin-right: auto;
+          }
+
+          .el-query-link
+          {
+            color: #555;
+            font-size: 15px;
+            text-decoration: underline;
+            /* border-bottom: 1px dashed; */
+          }
+
+       }
+
+    }
+
+    table
+    {
+      width: 100%;
+
+      td
+      {
+        padding: 6px 6px;
+        text-align: center;
+        line-height: 1;
+
+        > *
+        {
+          padding: 5px 3px;
+        }
+
+        &.archive
+        {
+          a
+          {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #EEE;
+            color: #222;
+            text-decoration: underline;
+          }
+        }
+
+        &.today
+        {
+          a
+          {
+             background: #777;
+             color: #FFF;
+          }
+
+          font-weight: bold;
+        }
+      }
+    }
+}

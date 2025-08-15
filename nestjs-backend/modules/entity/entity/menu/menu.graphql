@@ -1,0 +1,15 @@
+
+type Query {
+  getMenus: [Menu]
+}
+
+type Menu {
+  _id: String
+  nid: Int
+  code: String
+  title: String
+}
+
+
+
+

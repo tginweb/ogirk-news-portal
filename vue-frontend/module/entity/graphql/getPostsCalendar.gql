@@ -1,0 +1,11 @@
+
+query (
+  $filter: JSON
+) {
+  res: getPostsCalendar(
+    filter: $filter
+  ) {
+    info
+    count
+  }
+}

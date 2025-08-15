@@ -1,0 +1,97 @@
+.sm-widget-header.header-1
+{
+  position: relative;
+  border-bottom: 1px solid #aab0b6;
+  padding: 0 0 8px 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  overflow: hidden;
+
+
+  .w-caption,
+  .w-filters,
+  .w-more {
+
+  }
+
+  .w-caption
+  {
+    display: inline-block;
+    font-size: 27px;
+    line-height: 1em;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    margin-right: auto;
+    padding-right: 20px;
+  }
+
+  .w-filters
+  {
+     margin: 5px 10px 0 0;
+     overflow: hidden;
+     overflow-x: auto;
+     margin-bottom: -50px;
+     white-space: nowrap;
+
+     .q-filters
+     {
+       padding-bottom: 20px;
+     }
+  }
+
+  .w-more
+  {
+    display: inline-block;
+    font-size: 27px;
+    line-height: 1em;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: 1px;
+    margin: 0 0 0 0;
+    white-space: nowrap;
+  }
+
+  .w-caption,
+  .w-caption a,
+  .w-more,
+  .w-more a
+  {
+    color: #818a93;
+    text-decoration: none;
+  }
+
+
+  .w-more-icon,
+  .w-more-text
+  {
+     display: inline-block;
+     vertical-align: top;
+  }
+
+  .w-more-icon
+  {
+     margin: 2px 0 0 10px;
+  }
+
+}
+
+
+.sm-elementor-color-class-dark
+{
+  .sm-widget-header.header-1
+  {
+
+
+    .w-caption,
+    .w-caption a,
+    .w-more,
+    .w-more a
+    {
+      color: #FFF;
+    }
+
+  }
+
+}

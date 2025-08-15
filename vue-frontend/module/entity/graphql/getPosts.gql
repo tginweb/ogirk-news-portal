@@ -1,0 +1,50 @@
+#import "./fragments/Term/Term.gql"
+#import "./fragments/Post/Post.gql"
+#import "./fragments/Connection/PageInfo.gql"
+
+query (
+  $filter: JSON,
+  $nav: QueryInputNav,
+
+  $image: Boolean = true,
+  $imageSize: String = "d2.4",
+  $imageSizes: [String] = [],
+  $imageHook: Boolean = true,
+
+  $terms: Boolean = true,
+  $termsTaxonomy: [String] = ["category"],
+
+  $hub: Boolean = false,
+
+  $gallery: Boolean = false,
+  $galleryImageSize: String = "d1.25",
+  $galleryImageSizes: [String] = ["m1.9", "d1.9", "d1.6"],
+
+  $authors: Boolean = false,
+  $content: Boolean = false,
+
+  $view: String = "public",
+  $queryId: String,
+  $alterable: Boolean = false,
+  $excluder: Boolean,
+  $await: String,
+  $cache: JSON
+) {
+  res: getPosts(
+    filter: $filter,
+    nav: $nav,
+    view: $view,
+    queryId: $queryId,
+    alterable: $alterable,
+    excluder: $excluder,
+    await: $await,
+    cache: $cache
+  ) {
+    nodes {
+      ...Post
+    }
+    pageInfo {
+      ...PageInfo
+    }
+  }
+}

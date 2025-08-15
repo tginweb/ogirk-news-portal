@@ -1,0 +1,9 @@
+#import "../Term/Term.gql"
+#import "./Post.gql"
+
+fragment PostIssue on Post {
+
+  ...Post
+
+}
+

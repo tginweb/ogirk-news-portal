@@ -1,0 +1,10 @@
+
+type Post {
+  metaIssue: PostMetaIssue
+}
+
+type PostMetaIssue {
+  post_num_year: String
+  post_num_all: String
+  file: File
+}

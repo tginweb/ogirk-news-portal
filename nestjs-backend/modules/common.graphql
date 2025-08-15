@@ -1,0 +1,109 @@
+
+type Datasource {
+    name: String
+    data: JSON
+}
+
+type PageInfo {
+    hasNext: Boolean
+    hasPrevious: Boolean
+    next: String
+    previous: String
+    total: Int
+    ids: JSON
+    highlights: JSON
+}
+
+input QueryInputNav {
+    page: Int
+    limit: Int
+    maxLimit: Int
+    previous: String
+    next: String
+    sortAscending: Boolean
+    sortField: String
+    sortFilter: String
+    total: Int
+}
+
+input FilterConditionInt {
+    op: String
+    value: BigInt
+    values: [BigInt]
+}
+
+input FilterConditionString {
+    op: String
+    value: String
+    values: [String]
+}
+
+input FilterConditionDate {
+    op: String
+    value: DateTime
+    values: [DateTime]
+}
+
+
+type ResultInfo {
+    status: String
+    messages: JSON
+}
+
+type OperationResult {
+    _result: JSON
+    payload: JSON
+}
+
+input SecureActionConfirm {
+    sid: String
+    code: String
+}
+
+
+type Image {
+    nid: Int
+    post_id: Int
+    src: String
+    author: String
+    caption: String
+    width: Int
+    height: Int
+    thumbs(gallery: Boolean, sizes: [String], size: String): JSON
+    gallery_crop_disable: Boolean
+    facefind_disable: Boolean
+}
+
+type File {
+    nid: Int
+    src: String
+}
+
+type ImageThumb {
+    src: String
+    src_wepb: String
+    width: Int
+    height: Int
+}
+
+type MenuItem {
+    menu: String
+    title: String
+    url: String
+    native: Boolean
+    dropdown: JSON
+    children: [MenuItem]
+    entityNid: Int
+    iconImage: String
+}
+
+
+directive @cacheControl(
+    maxAge: Int,
+    scope: CacheControlScope
+) on OBJECT | FIELD_DEFINITION
+
+enum CacheControlScope {
+    PUBLIC
+    PRIVATE
+}

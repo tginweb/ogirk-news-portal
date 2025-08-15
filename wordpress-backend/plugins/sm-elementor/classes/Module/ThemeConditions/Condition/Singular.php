@@ -1,0 +1,60 @@
+<?php
+
+namespace ElementorPro\Modules\ThemeBuilder\Conditions;
+
+
+use \ElementorPro\Modules\ThemeBuilder\Module;
+
+class Singular extends \ElementorPro\Modules\ThemeBuilder\Conditions\Condition_Base {
+
+    protected $sub_conditions = [
+        'front_page',
+        'singular_context',
+        'singular_template',
+    ];
+
+    public static function get_type() {
+        return 'singular';
+    }
+
+    public function get_name() {
+        return 'singular';
+    }
+
+    public static function get_priority() {
+        return 60;
+    }
+
+    public function get_label() {
+        return __( 'Singular', 'elementor-pro' );
+    }
+
+    public function get_all_label() {
+        return __( 'All Singular', 'elementor-pro' );
+    }
+
+    public function register_sub_conditions() {
+        $post_types = Module::get_public_post_types();
+        unset( $post_types['product'] );
+
+        $post_types['attachment'] = get_post_type_object( 'attachment' )->label;
+
+        foreach ( $post_types as $post_type => $label ) {
+            $condition = new Post( [
+                'post_type' => $post_type,
+            ] );
+
+            $this->register_sub_condition( $condition );
+        }
+
+        $this->sub_conditions[] = 'by_author';
+
+        // Last condition.
+        $this->sub_conditions[] = 'not_found404';
+    }
+
+    public function check( $args ) {
+        return is_singular() || is_404();
+    }
+}
+

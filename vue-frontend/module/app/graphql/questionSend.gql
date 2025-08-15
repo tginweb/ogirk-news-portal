@@ -1,0 +1,6 @@
+mutation ($data: JSON) {
+  res: questionSend(data: $data) {
+    _result
+    payload
+  }
+}

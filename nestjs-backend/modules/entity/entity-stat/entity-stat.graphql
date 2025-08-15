@@ -1,0 +1,7 @@
+
+type Mutation {
+  entityStat_HitView(entityType: String, entityNid: Int): JSON
+}
+
+
+

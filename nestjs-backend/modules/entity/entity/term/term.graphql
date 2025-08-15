@@ -1,0 +1,74 @@
+type Query {
+
+  getTermsList(
+    filter: JSON,
+    nav: QueryInputNav,
+    view: String,
+    queryId: String,
+    await: String,
+    excluder: Boolean,
+    cache: JSON
+  ): [Term]
+
+  getTerms(
+    filter: JSON,
+    nav: QueryInputNav,
+    view: String,
+    queryId: String,
+    await: String,
+    excluder: Boolean,
+    cache: JSON
+  ): TermsConnection
+
+  getTerm(
+    filter: JSON,
+    nav: QueryInputNav,
+    view: String,
+    queryId: String,
+    await: String,
+    excluder: Boolean
+  ): Term
+}
+
+
+type TermsConnection {
+  nodes: [Term]
+  pageInfo: PageInfo
+}
+
+type Term {
+  _id: String
+  nid: Int
+  parent: Int
+  children: [Int]
+
+  name: String
+  nameShort: String
+  name_ru: String
+  name_en: String
+
+  title: String
+  content: String
+  slug: String
+  code: String
+  taxonomy: String
+  weight: Int
+  meta: JSON
+  field: JSON
+  lastActivity: String
+  postCount: Int
+
+  url: String
+  editUrl: String
+
+  post(filter: JSON): Post
+  posts(filter: JSON, nav: JSON): PostsConnection
+
+  nameLemmasList: [String]
+}
+
+type TermsByTaxonomy {
+  category: [Term]
+  post_tag: [Term]
+}
+

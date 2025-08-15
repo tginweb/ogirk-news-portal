@@ -1,0 +1,127 @@
+.sm-query-view
+{
+  .q-pagination
+  {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 50px;
+    clear: both;
+
+    .q-page-nav
+    {
+      border-color: #dcdcdc;
+
+      -webkit-box-flex: 0 1 auto;
+      -moz-box-flex: 0 1 auto;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+
+      font-size: 15px;
+      line-height: 18px;
+      color: #666;
+      padding: 3px 15px;
+      margin: 0 2px;
+      border-right: 1px solid $border-color;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      border-left: 1px solid $border-color;
+      outline: none;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out 0s;
+
+      i {
+        color: #222;
+        line-height: 1;
+      }
+
+      &[data-page="prev"], &[data-page="next"] {
+        padding: 5px 18px;
+      }
+
+      &[data-page="next"]
+      {
+        margin-right: 0;
+      }
+
+      &:hover, &.q-current-page
+      {
+        background: #eee;
+      }
+
+      &.q-disabled, &.q-current-page
+      {
+        pointer-events: none;
+      }
+
+      &.q-disabled, &.q-disabled i
+      {
+        color: #999;
+        border-color: #eaeaea;
+      }
+    }
+  }
+
+  .q-load-more
+  {
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 999px;
+    outline: none;
+    transition: all .3s ease-in-out 0s;
+
+    &:hover {
+      color: #eee;
+      background: #333;
+      border-color: #333;
+    }
+
+    &.q-disabled {
+      display: none;
+    }
+  }
+
+  .q-loading
+  {
+    display: none;
+    position: relative;
+    margin: 0 -51px 0 15px;
+    width: 28px;
+    height: 28px;
+    background: url(../images/loading.gif) center center no-repeat;
+    visibility: hidden;
+  }
+
+  &.q-processing .q-loading {
+    visibility: visible;
+  }
+
+
+  .q-loader-gif {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: transparent url(../images/bricks-loader.gif) center center no-repeat;
+    display: none;
+  }
+
+  &.q-fetching .q-inner {
+    opacity: 0.3;
+  }
+
+  &.q-fetching .q-loader-gif {
+    display: block;
+  }
+
+  &.q-processing .q-loader-gif {
+    display: block;
+  }
+
+
+}

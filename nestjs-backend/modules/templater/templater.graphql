@@ -1,0 +1,11 @@
+type TemplaterTemplateConnection {
+  nodes: [TemplaterTemplate]
+  pageInfo: PageInfo
+}
+
+type TemplaterTemplate {
+  _id: String
+  name: String
+  format: String
+  content: String
+}

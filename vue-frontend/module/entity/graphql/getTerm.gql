@@ -1,0 +1,32 @@
+#import "./fragments/Term/Term.gql"
+
+#import "./fragments/Connection/PageInfo.gql"
+
+query (
+  $filter: JSON,
+  $nav: QueryInputNav,
+  $view: String = "public",
+  $queryId: String,
+  $excluder: Boolean,
+  $await: String,
+
+  $post: Boolean = false,
+  $postFilter: JSON = {},
+  $postImage: Boolean = true,
+  $postImageSize: String = "d2.4",
+) {
+  res: getTerm(
+    filter: $filter,
+    nav: $nav,
+    view: $view,
+    queryId: $queryId,
+  ) {
+    ...Term
+    post(filter: $postFilter) @include(if: $post) {
+      title
+      image @include(if: $postImage) {
+        thumbs(size: $postImageSize)
+      }
+    }
+  }
+}

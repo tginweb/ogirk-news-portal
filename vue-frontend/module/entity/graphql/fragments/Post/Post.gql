@@ -1,0 +1,63 @@
+#import "../Term/Term.gql"
+
+fragment Post on Post {
+  _id
+  nid
+  title
+  slug
+  codePath
+  format
+  url
+  created
+  type
+  excerpt
+  meta
+  taxonomy
+  share
+  editUrl
+
+  contentFormatted @include(if: $content)
+  builder @include(if: $content)
+  builderType @include(if: $content)
+
+  hub @include(if: $hub) {
+    nid
+    title
+    type
+    url
+    meta
+  }
+
+  terms(tax: $termsTaxonomy) @include(if: $terms) {
+    ...Term
+  }
+
+  image(hook: $imageHook) @include(if: $image) {
+    post_id
+    src
+    thumbs(size: $imageSize, sizes: $imageSizes)
+    author
+    caption
+  }
+
+  gallery @include(if: $gallery) {
+    post_id
+    src
+    thumbs(gallery: true, size: $galleryImageSize, sizes: $galleryImageSizes)
+    author
+    caption
+    gallery_crop_disable
+    facefind_disable
+  }
+
+  textAuthor @include(if: $authors) {
+    name
+    url
+  }
+
+  fotoAuthor @include(if: $authors) {
+    name
+    url
+  }
+}
+

@@ -1,0 +1,33 @@
+
+@import 'config/_variables';
+
+@import 'modules/hacks/module';
+@import 'modules/widget/module';
+@import 'modules/sticky/module';
+@import 'modules/archive/module';
+@import 'modules/link/module';
+
+
+@import 'plugin/widget-divider';
+@import 'plugin/widget-slider-menu';
+
+@import 'misc/animation';
+
+
+
+.elementor-widget-bdt-advanced-icon-box.elementor-position-bottom
+{
+  .bdt-advanced-icon-box
+  {
+    text-align: left;
+    display: flex;
+    flex-direction: column-reverse!important;
+    height: 100%;
+  }
+
+  .bdt-advanced-icon-box-icon
+  {
+    margin-top: auto;
+  }
+
+}
